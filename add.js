@@ -10,5 +10,7 @@ let btn3 = document.getElementById("btn3")
 let btn4 = document.getElementById("btn4")
 
 btn1.addEventListener("click", function (){
-    tg.MainButton.setText("btn1 bosildi")
-})
+    tg.MainButton.setText("btn1 bosildi");
+    tg.MainButton.show();
+}
+)
