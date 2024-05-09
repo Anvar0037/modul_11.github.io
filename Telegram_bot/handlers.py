@@ -10,7 +10,7 @@ dp = Dispatcher()
 async def start(msg: types.Message):
     await msg.answer(text="Salom", reply_markup=apple_kb)
 
-@dp.message(F.func(lambda msg: msg.web_app_data.data == "TestMessage"))
+@dp.message(F.func(lambda msg: msg.web_app_data.data))
 async def get_btn(msg: types.Message):
     print(msg)
     await msg.answer(msg.web_app_data.data)
