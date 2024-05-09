@@ -14,6 +14,7 @@ btn1.addEventListener("click", function (){
     tg.MainButton.show();
 }
 );
+
 btn2.addEventListener("click", function (){
     tg.MainButton.setText("btn2 bosildi");
     tg.MainButton.show();
@@ -29,3 +30,8 @@ btn4.addEventListener("click", function (){
     tg.MainButton.show();
 }
 );
+
+
+Telegram.WebApp.onEvent("mainButtonClicked", function () {
+    tg.sendData("TextMEssage")
+});
