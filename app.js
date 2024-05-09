@@ -32,7 +32,8 @@ btn3.addEventListener("click", function (){
 );
 btn4.addEventListener("click", function (){
     tg.MainButton.setText("Lavash bosildi");
-    item = "Lavash bosildi";
+    item = " Nomi- Lavash \
+    Narxi- 3.99$";
     tg.MainButton.show();
 }
 );
