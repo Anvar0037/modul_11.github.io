@@ -13,26 +13,26 @@ let item = ""
 
 btn1.addEventListener("click", function (){
     tg.MainButton.setText("btn1 bosildi");
-    item = "button1 bosildi";
+    item = "Burger bosildi";
     tg.MainButton.show();
 }
 );
 
 btn2.addEventListener("click", function (){
     tg.MainButton.setText("btn2 bosildi");
-    item = "button2 bosildi";
+    item = "Hot-Dog bosildi";
     tg.MainButton.show();
 }
 );
 btn3.addEventListener("click", function (){
     tg.MainButton.setText("btn3 bosildi");
-    item = "button3 bosildi";
+    item = "Pizza bosildi";
     tg.MainButton.show();
 }
 );
 btn4.addEventListener("click", function (){
     tg.MainButton.setText("btn4 bosildi");
-    item = "button4 bosildi";
+    item = "Lavash bosildi";
     tg.MainButton.show();
 }
 );
