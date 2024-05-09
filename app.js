@@ -33,5 +33,5 @@ btn4.addEventListener("click", function (){
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
-    tg.sendData("TextMEssage")
+    tg.sendData("TestMessage")
 });
