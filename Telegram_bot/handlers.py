@@ -15,4 +15,4 @@ async def get_btn(msg: types.Message):
     text = msg.web_app_data.data
     print(msg)
     await msg.answer(text=f"Nomi {text.split('/')[0]}\n"
-                          f"Narxi: {text.split('/')[1]}\n")
+                          f"Narxi: {text.split('/')[1]}")
