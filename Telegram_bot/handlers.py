@@ -12,7 +12,5 @@ async def start(msg: types.Message):
 
 @dp.message(F.func(lambda msg: msg.web_app_data.data))
 async def get_btn(msg: types.Message):
-    text = msg.web_app_data.data
     print(msg)
-    await msg.answer(text=f"Nomi {text.split('/')[0]}\n"
-                          f"Narxi: {text.split('/')[1]}")
+    await msg.answer(msg.web_app_data.data)
