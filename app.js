@@ -13,8 +13,8 @@ let item = ""
 
 btn1.addEventListener("click", function (){
     tg.MainButton.setText("Burger bosildi");
-    item = " Nomi- Burger \
-    Narxi- 5$";
+    item = " Burger, \
+    5$";
 
     tg.MainButton.show();
 }
@@ -22,23 +22,23 @@ btn1.addEventListener("click", function (){
 
 btn2.addEventListener("click", function (){
     tg.MainButton.setText("Hot-Dog bosildi");
-    item = " Nomi- Hot-Dog \
-    Narxi- 2.48$";
+    item = "Hot-Dog, \
+     2.48$";
     tg.MainButton.show();
 }
 );
 btn3.addEventListener("click", function (){
     tg.MainButton.setText("Pizza bosildi");
-    item = " Nomi- Pizza \
-    Narxi- 3.99$";
+    item = "Pizza \
+    3.99$";
 
     tg.MainButton.show();
 }
 );
 btn4.addEventListener("click", function (){
     tg.MainButton.setText("Lavash bosildi");
-    item = " Nomi- Lavash \
-    Narxi- 5$";
+    item = "Lavash \
+     5$";
     tg.MainButton.show();
 }
 );
