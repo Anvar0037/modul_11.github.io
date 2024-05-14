@@ -128,7 +128,7 @@ let rbtn1 = document.getElementById("rbtn1");
 let abtn1 = document.getElementById("abtn1");
 
 abtn1.addEventListener("click", function () {
-    count1.innerText = n_count1 += 1;
+    count1.innerText = count1 += 1;
     count1.style.display = "inline-block";
     tg.MainButton.setText("Burger");
     tg.MainButton.show();
@@ -152,7 +152,7 @@ let item2 = " ";
 let n_count2 = 0;
 rbtn2.addEventListener("click", function () {
     if (n_count2 > 0) {
-        count2.innerText = n_count2 -= 1;
+        count2.innerText = count2 -= 1;
     }
 
     count2.style.display = "inline-block";
@@ -164,7 +164,7 @@ rbtn2.addEventListener("click", function () {
 
 
 abtn2.addEventListener("click", function () {
-    count2.innerText = n_count2 += 1;
+    count2.innerText = count2 += 1;
     count2.style.display = "inline-block";
     item2 = "Hot-Dog/2.48/" + count2;
 
@@ -180,7 +180,7 @@ let item3 = " ";
 let n_count3 = 0;
 rbtn3.addEventListener("click", function () {
     if (n_count3 > 0) {
-        count3.innerText = n_count3 -= 1;
+        count3.innerText = count3 -= 1;
     }
 
     count3.style.display = "inline-block";
@@ -207,7 +207,7 @@ let item4 = " ";
 let n_count4 = 0;
 rbtn4.addEventListener("click", function () {
     if (n_count4 > 0) {
-        count4.innerText = n_count4 -= 1;
+        count4.innerText = count4 -= 1;
     }
 
     count4.style.display = "inline-block";
@@ -219,7 +219,7 @@ rbtn4.addEventListener("click", function () {
 
 
 abtn4.addEventListener("click", function () {
-    count4.innerText = n_count4 += 1;
+    count4.innerText = count4 += 1;
     count4.style.display = "inline-block";
     item4 = "Lavash/5/" + count4;
     tg.MainButton.setText("Lavash");
