@@ -136,8 +136,8 @@ abtn1.addEventListener("click", function () {
 
 });
 rbtn1.addEventListener("click", function () {
-    if (n_count1 > 0) {
-        count1.innerText = n_count1 -= 1;
+    if (count1 > 0) {
+        count1.innerText = count1 -= 1;
     }
     count1.style.display = "inline-block";
     item = "Burger/3.49/" + count1;
@@ -149,9 +149,9 @@ count2 = document.getElementById("count2");
 rbtn2 = document.getElementById("rbtn2");
 abtn2 = document.getElementById("abtn2");
 let item2 = " ";
-let n_count2 = 0;
+let count2 = 0;
 rbtn2.addEventListener("click", function () {
-    if (n_count2 > 0) {
+    if (count2 > 0) {
         count2.innerText = count2 -= 1;
     }
 
@@ -177,9 +177,9 @@ count3 = document.getElementById("count3");
 rbtn3 = document.getElementById("rbtn3");
 abtn3 = document.getElementById("abtn3");
 let item3 = " ";
-let n_count3 = 0;
+let count3 = 0;
 rbtn3.addEventListener("click", function () {
-    if (n_count3 > 0) {
+    if (count3 > 0) {
         count3.innerText = count3 -= 1;
     }
 
@@ -204,9 +204,9 @@ count4 = document.getElementById("count4");
 rbtn4 = document.getElementById("rbtn4");
 abtn4 = document.getElementById("abtn4");
 let item4 = " ";
-let n_count4 = 0;
+let count4 = 0;
 rbtn4.addEventListener("click", function () {
-    if (n_count4 > 0) {
+    if (count4 > 0) {
         count4.innerText = count4 -= 1;
     }
 
