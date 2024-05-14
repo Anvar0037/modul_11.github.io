@@ -21,3 +21,16 @@ async def get_btn(msg: types.Message):
     await msg.answer(text=f"Nomi: {title} \n"
                           f"Soni: {quantity}\n"
                           f"Umumiy puli: {quantity * price}")
+
+
+@dp.message(F.func(lambda msg: msg.web_app_data.data))
+async def get_btn(msg: types.Message):
+    text1 = msg.web_app_data.data
+    print(text1)
+    title = text1.split('/')[0]
+    price = float(text1.split('/')[1])
+    quantity = int(text1.split('/')[2])
+    print(msg)
+    await msg.answer(text=f"Nomi: {title} \n"
+                          f"Soni: {quantity}\n"
+                          f"Umumiy puli: {quantity * price}")
