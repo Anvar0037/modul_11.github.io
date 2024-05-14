@@ -158,7 +158,7 @@ rbtn2.addEventListener("click", function () {
     count2.style.display = "inline-block";
     tg.MainButton.setText("Hot-Dog");
     tg.MainButton.show();
-    item2 = "Hot-Dog/2,48/" + count2.innerText;
+    item2 = "Hot-Dog/2.48/" + count2.innerText;
 
 });
 
@@ -166,7 +166,7 @@ rbtn2.addEventListener("click", function () {
 abtn2.addEventListener("click", function () {
     count2.innerText = n_count2 += 1;
     count2.style.display = "inline-block";
-    item2 = "Hot-Dog/2,48/" + count2;
+    item2 = "Hot-Dog/2.48/" + count2;
 
     tg.MainButton.setText("Hot-Dog");
     tg.MainButton.show();
