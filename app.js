@@ -53,24 +53,24 @@ rbtn2.addEventListener("click", function () {
 })
 abtn3.addEventListener("click", function () {
 
-    count2.innerText = num_count += 1;
+    count2.innerText = num_count2 += 1;
     count2.style.display = "block";
 })
 
 rbtn3.addEventListener("click", function () {
 
-    count2.innerText = num_count -= 1;
+    count2.innerText = num_count2 -= 1;
     count2.style.display = "block";
 })
 abtn4.addEventListener("click", function () {
 
-    count3.innerText = num_count += 1;
+    count3.innerText = num_count3 += 1;
     count3.style.display = "block";
 })
 
 rbtn4.addEventListener("click", function () {
 
-    count3.innerText = num_count -= 1;
+    count3.innerText = num_count3 -= 1;
     count3.style.display = "block";
 })
 
