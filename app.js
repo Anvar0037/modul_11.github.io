@@ -20,6 +20,8 @@ let item = ""
 let num_count = 0
 
 let num_count1 = 0
+let num_count2 = 0
+let num_count3 = 0
 
 
 count = document.getElementById("count")
