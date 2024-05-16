@@ -1,7 +1,7 @@
 from aiogram import Dispatcher, types, F
 from aiogram.filters import CommandStart
 
-from Telegram_bot.keyboards import apple_kb
+from keyboards import apple_kb
 
 dp = Dispatcher()
 
@@ -19,10 +19,7 @@ async def get_btn(msg: types.Message):
         title = products[i].split('/')[0]
         price = int(products[i].split('/')[1])
         quantity = int(products[i].split('/')[2])
-        await msg.answer(text=f"Mahsulot Nomi: {title}\n"
-                              f"Mahsulot Narxi: {price}\n"
-                              f"Mahsulot Soni: {quantity}\n"
+        await msg.answer(text=f"Nomi: {title}\n"
+                              f"Narxi: {price}\n"
+                              f"Soni: {quantity}\n"
                               f"Umumiy narxi: {quantity * price}$")
-
-
-
