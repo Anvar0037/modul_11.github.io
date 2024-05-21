@@ -35,8 +35,9 @@ async def order(msg: Message):
     )
 
 
-async def pre_checkout(pre_checkout_query: PreCheckoutQuery, bot: Bot):
-    await bot.answer_pre_checkout_query(pre_checkout_query.id, ok=True)
+@dp.pre_checkout_query()
+async def pre_checkout(checkout_query: PreCheckoutQuery, bot: Bot):
+    await bot.answer_pre_checkout_query(checkout_query.id, ok=True)
 
 
 @dp.message(F.func(lambda msg: msg.web_app_data.data))
@@ -48,24 +49,18 @@ async def get_btn(msg: Message):
     for i in range(len(products_data)):
         if len(products_data[i].split("/")) >= 3:
             title = products_data[i].split('/')[0]
-            price = int(products_data[i].split('/')[1])
+            price = float(products_data[i].split('/')[1])
             quantity = int(products_data[i].split('/')[2])
-            products["Nomi"] = title
-            products["Price"] = price
-            products["Quantity"] = quantity
+            product = {
+                "Nomi": title,
+                "Price": price,
+                "Quantity": quantity
+            }
+            product.update(product)
             await msg.answer(text=f"Nomi: {title}\n"
                                   f"Narxi: {price}\n"
                                   f"Soni: {quantity}\n"
                                   f"Umumiy narxi: {quantity * price}$")
             summa += price * quantity
-    await bot.send_invoice(
-        chat_id=msg.chat.id,
-        title="Tolov",
-        description="TElegram orqali tolov",
-        provider_token=PROVIDER_TOKEN,
-        currency="UZS",
-        payload="Ichki malumot",
-        prices=[
 
-        ]
-    )
+

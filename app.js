@@ -18,7 +18,7 @@ abtn1.addEventListener("click", function () {
     count1.style.display = "inline-block";
     tg.MainButton.setText("Burger");
     tg.MainButton.show();
-    item1 = "Burger/3.49/" + count1.innerText;
+    item1 = "Burger/40.000/" + count1.innerText;
 
 });
 rbtn1.addEventListener("click", function () {
@@ -26,7 +26,7 @@ rbtn1.addEventListener("click", function () {
         count1.innerText = n_count1 -= 1;
     }
     count1.style.display = "inline-block";
-    item1 = "Burger/3.49/" + count1.innerText;
+    item1 = "Burger/40.000/" + count1.innerText;
     tg.MainButton.setText("Burger");
     tg.MainButton.show();
 });
@@ -42,7 +42,7 @@ rbtn2.addEventListener("click", function () {
     }
 
     count2.style.display = "inline-block";
-    item2 = "Hot-Dog/2.48/" + count2.innerText;
+    item2 = "Hot-Dog/30.000/" + count2.innerText;
     tg.MainButton.setText("Hot-Dog");
     tg.MainButton.show();
 });
@@ -52,7 +52,7 @@ rbtn2.addEventListener("click", function () {
 abtn2.addEventListener("click", function (){
     count2.innerText = n_count2 += 1;
     count2.style.display = "inline-block";
-    item2 = "Hot-Dog/2.48/" + count2.innerText;
+    item2 = "Hot-Dog/30.000/" + count2.innerText;
     tg.MainButton.setText("Hot-Dog");
     tg.MainButton.show();
 });
@@ -69,7 +69,7 @@ rbtn3.addEventListener("click", function () {
     }
 
     count3.style.display = "inline-block";
-    item3 = "Pizza/3.99/" + count3.innerText;
+    item3 = "Pizza/50.000/" + count3.innerText;
 
     tg.MainButton.setText("Pizza");
     tg.MainButton.show();
@@ -80,7 +80,7 @@ rbtn3.addEventListener("click", function () {
 abtn3.addEventListener("click", function (){
     count3.innerText = n_count3 += 1;
     count3.style.display = "inline-block";
-    item3 = "Pizza/3.99/" + count3.innerText;
+    item3 = "Pizza/50.000/" + count3.innerText;
     tg.MainButton.setText("Pizza");
     tg.MainButton.show();
 });
@@ -97,7 +97,7 @@ rbtn4.addEventListener("click", function () {
     }
 
     count4.style.display = "inline-block";
-    item4 = "Lavash/5/" + count4.innerText;
+    item4 = "Lavash/25.000/" + count4.innerText;
 
     tg.MainButton.setText("Lavash");
     tg.MainButton.show();
@@ -108,7 +108,7 @@ rbtn4.addEventListener("click", function () {
 abtn4.addEventListener("click", function (){
     count4.innerText = n_count4 += 1;
     count4.style.display = "inline-block";
-    item4 = "Lavash/5/" + count4.innerText;
+    item4 = "Lavash/25.000/" + count4.innerText;
 
     tg.MainButton.setText("Lavash");
     tg.MainButton.show();
