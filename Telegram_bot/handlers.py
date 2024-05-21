@@ -118,25 +118,33 @@ async def pre_checkout_query(checkout_query: PreCheckoutQuery):
 @dp.message(F.func(lambda msg: msg.web_app_data.data))
 async def get_btn(msg: Message):
     text = msg.web_app_data.data
-    products = text.split("|")
+    products_data = text.split("|")
+    products = {}
     user_id = msg.from_user.id
     user_cart[user_id] = []
 
-    for product in products:
-        if len(product.split("/")) >= 3:
-            title = product.split('/')[0]
-            price = float(product.split('/')[1])
-            quantity = int(product.split('/')[2])
-            user_cart[user_id].append({
-                'title': title,
-                'price': price * quantity  # Store total price for each product
-            })
-            await msg.answer(
-                text=f"Nomi: {title}\n"
-                     f"Narxi: {price}\n"
-                     f"Soni: {quantity}\n"
-                     f"Umumiy narxi: {quantity * price} UZS"
-            )
+    for i in range(len(products_data)):
+        if len(products_data[i].split("/")) >= 3:
+            title = products_data[i].split('/')[0]
+            price = products_data[i].split('/')[1]
+            quantity = products_data[i].split('/')[2]
+            product = {
+                "title": title,
+                "price": float(price),
+                "quantity": float(quantity)
+            }
+            products[i] = product
+    print(products)
+    await bot.send_invoice(
+        chat_id=msg.chat.id,
+        title="оплата",
+        description="оплата через tgg",
+        provider_token=PROVIDER_TOKEN,
+        currency="UZS",
+        payload="Ichki malumot",
+        prices=[LabeledPrice(label=f"{product['title']}({['quantity']})",
+                             amount=(product["price"] * product["quantity"]) * 100.0)
+                for product in products])
 
-    summa = sum(item['price'] for item in user_cart[user_id])
-    await msg.answer(text=f"Tolanishi kerak: {summa} UZS", reply_markup=buy_ikb)
+    # summa = sum(item['price'] for item in user_cart[user_id])
+    # await msg.answer(text=f"Tolanishi kerak: {summa} UZS", reply_markup=buy_ikb)
